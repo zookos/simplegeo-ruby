@@ -110,6 +110,11 @@ module SimpleGeo
         HashUtils.recursively_symbolize_keys geojson_hash
       end
       
+      def get_context_ip(ip)
+        geojson_hash = get Endpoint.context_ip(ip)
+        HashUtils.recursively_symbolize_keys geojson_hash
+      end
+      
       # Required
       #   lat - The latitude of the point
       #   lon - The longitude of the point
