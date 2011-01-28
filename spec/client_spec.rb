@@ -1019,7 +1019,7 @@ describe "Client" do
     end
 
     it "should return a hash with the correct info" do
-      info = SimpleGeo::Client.get_contains(37.7587890625, -122.4267578125)
+      info = SimpleGeo::Client.get_context(37.7587890625, -122.4267578125)
       info.should == [
         {
           :bounds =>

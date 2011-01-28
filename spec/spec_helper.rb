@@ -6,7 +6,7 @@ require 'rspec'
 require 'autotest'
 require 'fakeweb'
 
-Spec::Runner.configure do |config|
+Rspec.configure do |config|
 
   # don't allow any external connections
   FakeWeb.allow_net_connect = false
