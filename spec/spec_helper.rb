@@ -2,8 +2,8 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'rubygems'
 require 'simple_geo'
-require 'spec'
-require 'spec/autorun'
+require 'rspec'
+require 'autotest'
 require 'fakeweb'
 
 Spec::Runner.configure do |config|
