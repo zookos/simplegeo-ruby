@@ -203,7 +203,6 @@ describe "Client" do
         records[1].id.should == '41531696'
         records[1].type.should == 'place'
         records[1].layer.should == 'com.simplegeo.us.business'
-        records[1].created.should == Time.at(1271985146)
         records[1].lat.should == 37.755470000000003
         records[1].lon.should == -122.420646
         records[1].properties.should == {
