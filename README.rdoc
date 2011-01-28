@@ -35,6 +35,10 @@ For more examples see: spec/client_spec.rb
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
+== Running tests
+* Use rspec 2 and run "rspec spec" from the project root to run all of the specs
+* You're going to require rspec json oauth fakeweb and autotest (plus their dependencies)
+
 == Copyright
 
 Copyright (c) 2010 Dan Dofter. See LICENSE for details.
