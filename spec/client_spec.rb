@@ -19,7 +19,6 @@ describe "Client" do
         record.id.should == '5373629'
         record.type.should == 'place'
         record.layer.should == 'com.simplegeo.global.geonames'
-        record.created.should == Time.at(1269832510)
         record.lat.should == 37.759650000000001
         record.lon.should == -122.42608
         record.properties.should == {
@@ -112,7 +111,6 @@ describe "Client" do
         records[0].id.should == '41530629'
         records[0].type.should == 'place'
         records[0].layer.should == 'com.simplegeo.us.business'
-        records[0].created.should == Time.at(1271985142)
         records[0].lat.should == 37.760350000000003
         records[0].lon.should == -122.419043
         records[0].properties.should == {
