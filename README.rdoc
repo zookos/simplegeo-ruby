@@ -39,6 +39,9 @@ For more examples see: spec/client_spec.rb
 * Use rspec 2 and run "rspec spec" from the project root to run all of the specs
 * You're going to require rspec json oauth fakeweb and autotest (plus their dependencies)
 
+== Adding tests
+* If you want to add new tests, you're going to want to set fakeweb to allow connections (spec/spec_helper.rb) and you will need to put a valid token and secret into a before block - similar to lines 4-6 in spec/client_spec.rb, but you'll have to enter valid credentials.
+
 == Copyright
 
 Copyright (c) 2010 Dan Dofter. See LICENSE for details.
