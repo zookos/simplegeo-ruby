@@ -9,7 +9,7 @@ require 'fakeweb'
 Rspec.configure do |config|
 
   # don't allow any external connections
-  FakeWeb.allow_net_connect = false
+  FakeWeb.allow_net_connect = true
 
   config.before(:each) do
     FakeWeb.clean_registry
