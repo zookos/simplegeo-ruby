@@ -110,6 +110,12 @@ module SimpleGeo
         HashUtils.recursively_symbolize_keys geojson_hash
       end
       
+      def get_context_by_address(address)
+        address = URI.escape(address, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+        geojson_hash = get Endpoint.context_by_address(address)
+        HashUtils.recursively_symbolize_keys geojson_hash
+      end
+      
       def get_context_ip(ip)
         geojson_hash = get Endpoint.context_ip(ip)
         HashUtils.recursively_symbolize_keys geojson_hash
@@ -135,7 +141,13 @@ module SimpleGeo
       end
 
       def get_places_by_address(address, options={})
+        address = URI.escape(address, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
         geojson_hash = get Endpoint.places_by_address(address, options)
+        HashUtils.recursively_symbolize_keys geojson_hash
+      end
+
+      def get_places_by_ip(ip='ip', options={})
+        geojson_hash = get Endpoint.places_by_ip(ip, options)
         HashUtils.recursively_symbolize_keys geojson_hash
       end
 
