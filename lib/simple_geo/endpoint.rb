@@ -56,6 +56,19 @@ module SimpleGeo
         end
       end
 
+      def places_by_address(address, options)
+        if options.empty?
+          endpoint_url "places/address.json?q=#{address}", '1.0'
+        else
+          params = ""
+          params["address"] = "#{address}"
+          options.each do |k,v|
+            params << "#{k}=#{v}&"
+          end
+          endpoint_url "places/address.json?#{params.chop!}", '1.0'
+        end
+      end
+
       def density(lat, lon, day, hour=nil)
         if hour.nil?
           path = "density/#{day}/#{lat},#{lon}.json"
