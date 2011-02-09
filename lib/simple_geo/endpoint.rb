@@ -52,7 +52,7 @@ module SimpleGeo
         if options.empty?
           endpoint_url "places/#{lat},#{lon}.json", '1.0'
         else
-          params = ""
+          params = []
           options.each do |k,v|
             params << "#{k}=#{v}"
           end
