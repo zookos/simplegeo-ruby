@@ -64,7 +64,6 @@ module SimpleGeo
         if options.empty?
           endpoint_url "places/address.json?address=#{address}", '1.0'
         else
-          print address
           params = [] 
           params << "address=#{address}"
           options.each do |k,v|
