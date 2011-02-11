@@ -65,17 +65,23 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<json_pure>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 1.2.0"])
       s.add_development_dependency(%q<fakeweb>, [">= 1.2.0"])
+      s.add_development_dependency(%q<autotest>, [">= 4.4.6"])
+      s.add_development_dependency(%q<vcr>, [">= 1.6.0"])
     else
       s.add_dependency(%q<oauth>, [">= 0.4.0"])
       s.add_dependency(%q<json_pure>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 1.2.0"])
       s.add_dependency(%q<fakeweb>, [">= 1.2.0"])
+      s.add_dependency(%q<autotest>, [">= 4.4.6"])
+      s.add_dependency(%q<vcr>, [">= 1.6.0"])
     end
   else
     s.add_dependency(%q<oauth>, [">= 0.4.0"])
     s.add_dependency(%q<json_pure>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 1.2.0"])
     s.add_dependency(%q<fakeweb>, [">= 1.2.0"])
+    s.add_dependency(%q<autotest>, [">= 4.4.6"])
+    s.add_dependency(%q<vcr>, [">= 1.6.0"])
   end
 end
 
