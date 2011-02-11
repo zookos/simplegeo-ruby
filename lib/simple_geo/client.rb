@@ -7,6 +7,11 @@ module SimpleGeo
 
     class << self
 
+      def get_feature(id)
+        record_hash = get Endpoint.feature(id)
+        Record.parse_geojson_hash(record_hash)
+      end
+
       def set_credentials(token, secret)
         @@connection = Connection.new(token, secret)
         @@connection.debug = @@debug

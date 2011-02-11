@@ -3,6 +3,11 @@ module SimpleGeo
   class Endpoint
 
     class << self
+      
+      def feature(id)
+        endpoint_url "features/#{id}.json"
+      end
+      
       def record(layer, id)
         endpoint_url "records/#{layer}/#{id}.json"
       end

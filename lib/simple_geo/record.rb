@@ -47,7 +47,6 @@ module SimpleGeo
         :type => json_hash['properties'].delete('type'),
         :lat => json_hash['geometry']['coordinates'][1],
         :lon => json_hash['geometry']['coordinates'][0],
-        :created => Time.at(json_hash['created']),
         :properties => HashUtils.recursively_symbolize_keys(json_hash['properties'])
       )
     end
