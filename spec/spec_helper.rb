@@ -3,7 +3,6 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'rubygems'
 require 'simple_geo'
 require 'rspec'
-require 'autotest'
 require 'fakeweb'
 require 'vcr'
 
