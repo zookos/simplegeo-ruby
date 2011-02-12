@@ -25,6 +25,11 @@ Start by requiring SimpleGeo and setting your authentication credentials:
 
 For more examples see: spec/client_spec.rb 
 
+=== Building
+
+  rake gemspec
+  gem build simplegeo.gemspec
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
