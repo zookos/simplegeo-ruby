@@ -17,8 +17,11 @@ tmtags
 coverage
 rdoc
 pkg
+Gemfile.lock
 
 ## PROJECT::SPECIFIC
+*.gem
+*.gemspec
 
 ## RVM
 .rvmrc
