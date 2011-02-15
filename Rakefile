@@ -12,6 +12,8 @@ begin
     
     gem.add_dependency("oauth", ">= 0.4.0")
     gem.add_dependency("json_pure")
+    gem.add_dependency("geojson")
+    gem.add_dependency("GeoRuby")
 
     gem.add_development_dependency "rspec", ">= 1.2.0"
     gem.add_development_dependency("fakeweb", ">= 1.2.0")

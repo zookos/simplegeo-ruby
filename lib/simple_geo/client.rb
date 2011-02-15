@@ -216,6 +216,12 @@ module SimpleGeo
       end
     end
 
+    class Places
+      def self.add_feature(feature)
+        Client.post(Endpoint.places_for_creation, feature)
+      end
+    end
+
   end
 
 end

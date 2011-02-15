@@ -24,8 +24,8 @@ def fixture_file(filename)
 end
 
 def stub_request(method, url, options={})
-  if options[:fixture_file]
-    options[:body] = fixture_file(options.delete(:fixture_file))
-  end
+  options[:body] = fixture_file(options.delete(:fixture_file)) if options[:fixture_file]
+  options[:content_type] = 'application/json'
+
   FakeWeb.register_uri(method, url, options)
 end

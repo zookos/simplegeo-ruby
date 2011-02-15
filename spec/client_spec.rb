@@ -83,6 +83,36 @@ describe "Client" do
     end
   end
 
+  context "adding/updating a record" do
+    before :each do
+      FakeWeb.last_request = nil
+    end
+
+    before do
+      stub_request :post,
+        'http://api.simplegeo.com/1.0/places.json',
+        :status => 202,
+        :fixture_file => 'places_for_creation.json',
+        :content_type => "text/plainwhee"
+    end
+
+    it "should add or update a record" do
+      lambda {
+        feature = GeoRuby::SimpleFeatures::Feature.new \
+                          GeoRuby::SimpleFeatures::Point.from_x_y(37.75965, -122.42608),
+                          { :test_property => 'foobar' },
+                          '1234'
+
+        ret = SimpleGeo::Client::Places.add_feature(feature)
+        ret['id'].should_not == nil
+        ret['token'].should_not == nil
+        ret['uri'].should_not == nil
+      }.should_not raise_exception
+
+      FakeWeb.last_request['content-type'].should == 'application/json'
+    end
+  end
+
   context "deleting a record" do
     before do
       stub_request :delete,
@@ -334,7 +364,7 @@ describe "Client" do
         :fixture_file => 'get_history.json'
     end
 
-    it "should create or update the record" do
+    it "should get the record's history" do
       history = SimpleGeo::Client.get_history('com.simplegeo.global.geonames', '5373629')
       history.should == [
         {
